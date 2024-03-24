@@ -42,12 +42,12 @@ function ProjectsSection() {
           isSelected={tag === "MiniProject"}
         />
       </div>
-      <ul className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project,index) => (
-          <motion.li key={index} ref={ref}
-           variants={cardVariants} initial='initial' 
+          <motion.li key={index} 
+           variants={cardVariants} 
            animate={isInView?'animate':'initial'}
-           transition={{duration:0.3,delay:index*0.4}}
+           transition={{duration:0.1,delay:index*0.4}}
            >
           <ProjectCard
             key={project.id}
