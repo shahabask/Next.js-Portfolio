@@ -22,7 +22,7 @@ function ProjectCard({imgUrl,title,description,gitUrl,previewUrl}) {
         </div>
          <div className='text-white rounded-b-xl mt-3 bg-[#181818] py-6 px-4'>
            <h5 className='font-xl font-semibold md-2'>{title}</h5>
-            <p className='text-[#ADB7BE] h-14'>{description}</p>
+            <p className='text-[#ADB7BE] min-h-20'>{description}</p>
          </div>
         </div>
   )
