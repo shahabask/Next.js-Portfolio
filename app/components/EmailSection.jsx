@@ -50,10 +50,10 @@ function EmailSection() {
                 Whether you have a question or just want to say hi, I'll try my best to get back to you!`}
             </p>
             <div className='socials flex flex-row gap-2'>
-           <Link href='github.com'>
+           <Link href='https://github.com/shahabask'>
             <Image src={GithubIcon} alt='GitHub Icon'/>
            </Link>
-           <Link href='linkedIn.com'>
+           <Link href='https://www.linkedin.com/in/shahabasmohammed-softwaredeveloper/'>
            <Image src={LinkedInIcon} alt='LinkedIn Icon'/>
            </Link>
             </div>
