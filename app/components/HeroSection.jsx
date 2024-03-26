@@ -4,9 +4,21 @@ import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation'
 
 import {motion} from 'framer-motion'
+import Link from 'next/link';
    
   
 function HeroSection() {
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    const targetElement = document.querySelector('#contact');
+const navbarHeight = 120
+const targetPosition = targetElement.offsetTop - navbarHeight;
+window.scrollTo({
+  top: targetPosition,
+  behavior: 'smooth'
+});
+  };
   return (
     <section className='lg:py-16'>
       <div className='grid grid-cols-1 sm:grid-cols-12'>
@@ -37,7 +49,8 @@ function HeroSection() {
          { `Let's go through my journey`}
          </p>
          <div>
-           <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-sky-600 to-sky-800 hover:bg-slate-200 text-white'>Hire Me</button>
+           <Link href={'#contact'} onClick={handleClick}
+            className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-sky-600 to-sky-800 hover:bg-slate-200 text-white'>Hire Me</Link>
            <a download={'MERN STACK DEVELOPER - SHAHABAS.pdf'} href="/resume/shahabas_resume.pdf">    <button className='px-1 py-1 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-sky-500 to-sky-800 hover:bg-slate-800 text-white mt-3'>
          <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>Download CV</span></button></a>
          </div>
